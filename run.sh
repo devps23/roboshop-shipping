@@ -1,3 +1,6 @@
+source /data/secrets
+cat /data/secrets
+
 if [ -z "$CART_ENDPOINT" ]; then
   echo "CART_ENDPOINT is missing"
   exit 1
