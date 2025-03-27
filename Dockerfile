@@ -2,7 +2,7 @@ FROM          docker.io/maven as BUILD
 RUN           mkdir /app
 WORKDIR       /app
 COPY          ./ /app/
-RUN           mvn package
+RUN           mvn clean package
 RUN           mv target/shipping-1.0.jar shipping.jar
 
 
