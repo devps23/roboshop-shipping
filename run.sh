@@ -1,4 +1,4 @@
-zsource /data/secrets
+source /data/secrets
 cat /data/secrets
 
 if [ -z "$CART_ENDPOINT" ]; then
