@@ -20,7 +20,7 @@ fi
 # here MYSQL-SERVER-IPADDRESS is a DB_HOST
 # in our code DB_HOST is a rds end point
 
-java - javaagent:newrelic/newrelic.jar -Dnewrelic.config.license_key=${LICENSE_KEY} -jar /app/shipping.jar
+#java - javaagent:newrelic/newrelic.jar -Dnewrelic.config.license_key=${LICENSE_KEY} -jar /app/shipping.jar
 
 #ENTRYPOINT ["java","-javaagent:/usr/local/newrelic/newrelic.jar","-jar","/app/my-application.jar"]
 # -Dnewrelic.config.license_key=YOUR_NEW_RELIC_LICENSE_KEY ---to add License key
