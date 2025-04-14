@@ -10,8 +10,9 @@ FROM          docker.io/amazoncorretto:17
 RUN           yum install unzip -y
 RUN           mkdir /app
 WORKDIR       /app
+RUN           curl -O https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip && unzip newrelic-java               .zip  && rm -rf /app/newrelic-java.zip
 COPY          --from=BUILD /app/shipping.jar /app/shipping.jar
 COPY            run.sh /app/run.sh
-ENTRYPOINT     ["bash", "/app/run.sh" ]
+ENTRYPOINT      ["bash", "/app/run.sh" ]
 
 

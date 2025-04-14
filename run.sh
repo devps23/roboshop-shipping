@@ -11,12 +11,14 @@ if [ -z "$DB_HOST" ]; then
   exit 1
 fi
 
+if [ -z "$LICENSE_KEY" ]; then
+  echo "LICENSE_KEY is missing"
+  exit 1
+fi
+
 java -jar /app/shipping.jar
 
-#if [ -z "$LICENSE_KEY" ]; then
-#  echo "LICENSE_KEY is missing"
-#  exit 1
-#fi
+#java - javaagent:newrelic/newrelic.jar -Dnewrelic.config.license_key=${LICENSE_KEY} -jar /app/shipping.jar
 
 #mysql -h $DB_HOST -uroot -pRoboShop@1 < /app/schema/shipping.sql  this is a schema
 # here MYSQL-SERVER-IPADDRESS is a DB_HOST
