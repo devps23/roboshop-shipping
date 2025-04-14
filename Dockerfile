@@ -12,6 +12,6 @@ RUN           mkdir /app
 WORKDIR       /app
 COPY          --from=BUILD /app/shipping.jar /app/shipping.jar
 COPY            run.sh /app/run.sh
-ENTRYPOINT      ["bash", "/app/run.sh" ]
+ENTRYPOINT     ["bash", "/app/run.sh" ]
 
 
