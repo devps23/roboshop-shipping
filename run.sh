@@ -21,10 +21,8 @@ if [ -z "$component" ]; then
   exit 1
 fi
 
-
-java -jar /app/shipping.jar
-
-java - javaagent:newrelic/newrelic.jar -Dnewrelic.config.license_key=${LICENSE_KEY} -Dnewrelic.config.license_key=${component}-jar /app/shipping.jar
+#java -jar /app/shipping.jar
+java - javaagent:newrelic/newrelic.jar -Dnewrelic.config.license_key=${LICENSE_KEY} -Dnewrelic.config.license_key=${component} -jar /app/shipping.jar
 
 
 #mysql -h $DB_HOST -uroot -pRoboShop@1 < /app/schema/shipping.sql  this is a schema
